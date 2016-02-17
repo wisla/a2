@@ -1,0 +1,336 @@
+@font-face {
+    font-family: "Lato Thin";
+    src: url('../fonts/Lato-Thin.eot');
+    src: url('../fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Lato-Thin.woff') format('woff'),
+    url('../fonts/Lato-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato Light";
+    src: url('../fonts/Lato-Light.eot');
+    src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Lato-Light.woff') format('woff'),
+    url('../fonts/Lato-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 500;
+    font-family: 'Lato Light';
+    color: #fff;
+}
+
+section {
+    width: 100%;
+    /*padding: 0 5%;*/
+    display: table;
+    margin: 0;
+    max-width: none;
+    background-color: #3B3551;
+    height: 100vh;
+}
+section:nth-of-type(2n) {
+    background-color: rgba(41, 38, 56, 0);
+}
+
+.second {
+    background-image: url("../img/background-top2.jpg");
+    background-position: 0 -100%;
+    /*padding: 0 15%;*/
+}
+
+.title{
+    /*padding-bottom: 10%;*/
+    /*padding-top: 10%;*/
+    text-align: center;
+    font-family: 'Lato Thin';
+    font-size: 8vh;
+    color: #00B6F6;
+}
+
+.second .title {
+    padding-bottom: 10%;
+}
+
+.location .title {
+    padding-bottom: 10%;
+}
+
+.location {
+    background-color: #096B9A;
+    padding: 50px 20px 0;
+}
+
+.contact {
+    padding: 50px 20px 0;
+    background-color: #363843;
+    text-align: center;
+}
+
+/* CONTACT */
+form {
+    /*max-width: 420px;*/
+    margin: 50px auto;
+    /*text-align: center;*/
+}
+
+.contact input {
+    height: 50px;
+    width: 435px;
+}
+
+.contact textarea {
+    height: 190px;
+    width: 690px;
+}
+
+form label {
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.row {
+    margin: 0;
+}
+
+.title-intro {
+    max-width: 50%;
+    display: inline-block;
+}
+/*.intro {*/
+    /*height: 90vh;*/
+/*}*/
+
+.content {
+    display: table-cell;
+}
+
+h1 {
+    font-size: 3em;
+    display: block;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+h2 {
+    font-size: 6vh;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #C3CAD9;
+}
+
+a {
+    font-weight: 700;
+    color: #373B44;
+    position: relative;
+}
+a:hover {
+    opacity: 0.8;
+}
+a:active {
+    top: 1px;
+}
+
+footer {
+    padding: 1% 5%;
+    text-align: center;
+    background-color: #373B44;
+    color: white;
+}
+footer a {
+    color: #FE4B74;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+.first {
+    background-image: url("../img/background-top2.jpg");
+    background-repeat: no-repeat;
+}
+
+.first .content {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.first .content h2, .first .content h3 {
+    margin-bottom: 90px;
+}
+
+.map {
+  max-height: 100%;
+}
+
+/* new parallax */
+
+section.parallax-section {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index:10;}
+.parallax-holder {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center 0;
+    background-size: cover;
+}
+.parallax-holder .paralayer {
+    background-position: center 0;
+    background-size: cover;
+    height: 100%;
+    opacity: 1;
+    position: absolute;
+    width: 100%;}
+
+.family-1 {background-image:url('http://placehold.it/1600x792');}
+.family-2 {background-image:url('http://placehold.it/1600x800');}
+.family-3 {background-image:url('http://placehold.it/1600x1189');}
+.overlay {background-position: center center; background-repeat: repeat; height: 100%; left: 0; opacity: 0.55; position: absolute; top: 0; width: 100%; z-index: 3; background:#000; overflow:hidden;}
+
+/* end of new parallax */
+
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.btn-sm {
+    padding: 20px 30px;
+    font-size: 18px;
+    line-height: 1.5;
+    border-radius: 1px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 40px;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    .title-intro {max-width: inherit;}
+    .second .row {padding: 0 15%;}
+}
+
+/* MAP */
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+/*header {*/
+    /*height: 200px;*/
+    /*line-height: 200px;*/
+    /*text-align: center;*/
+    /*background: #2d313f;*/
+/*}*/
+/*header h1 {*/
+    /*color: #ffffff;*/
+    /*font-size: 20px;*/
+    /*font-size: 1.25rem;*/
+/*}*/
+@media only screen and (min-width: 768px) {
+    header {
+        height: 300px;
+        line-height: 300px;
+    }
+}
+
+#google-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #e7eaf0;
+}
+@media only screen and (min-width: 768px) {
+    #google-container {
+        height: 400px;
+    }
+}
+@media only screen and (min-width: 1170px) {
+    #google-container {
+        height: 600px;
+    }
+}
+
+#cd-google-map {
+    position: relative;
+}
+#cd-google-map address {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 1em 1em;
+    background-color: rgba(211, 104, 104, 0.9);
+    color: #ffffff;
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+@media only screen and (min-width: 768px) {
+    #cd-google-map address {
+        font-size: 15px;
+        font-size: 0.9375rem;
+        text-align: center;
+    }
+}
+
+#cd-zoom-in, #cd-zoom-out {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: rgba(211, 104, 104, 0.9);
+    background-repeat: no-repeat;
+    background-size: 32px 64px;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-controller.svg");
+}
+.no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
+    background-color: #d36868;
+}
+@media only screen and (min-width: 768px) {
+    #cd-zoom-in, #cd-zoom-out {
+        margin-left: 50px;
+    }
+}
+
+#cd-zoom-in {
+    background-position: 50% 0;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+@media only screen and (min-width: 768px) {
+    #cd-zoom-in {
+        margin-top: 50px;
+    }
+}
+
+#cd-zoom-out {
+    background-position: 50% -32px;
+}
