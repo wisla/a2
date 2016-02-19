@@ -13,8 +13,35 @@
     <link rel="stylesheet" href="css/animated.min.css" media="screen"/>
     <link rel="stylesheet" href="css/timeline.css" media="screen"/>
     <script type="text/javascript" src='js/modernizr.min.js'></script>
+
 </head>
 <body>
+<nav id="navigation">
+    <ul>
+        <li><a data-scroll href="#conference">CONFERENCE</a></li>
+        <li><a data-scroll href="#agenda">AGENDA</a></li>
+        <li><a data-scroll href="#speakers">SPEAKERS</a></li>
+        <li><a data-scroll href="#location">LOCATION</a></li>
+        <li><a data-scroll href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
+<div class="center-mouse">
+    <a href="#conference">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+    </a>
+
+    <div class="animate-circle">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+    </div>
+</div>
 <section class="first">
     <div class="content">
         <div class="title-intro">
@@ -26,7 +53,7 @@
     </div>
 </section>
 
-<section class="second">
+<section id="conference" class="second">
     <div class="content">
         <h2 class="title">CONFERENCE</h2>
 
@@ -69,8 +96,7 @@
                 <input class='radio' id='work5' name='works' type='radio' checked>
 
                 <div class="relative">
-                    <label for='work5'>Rejestracja uczestników, briefing prasowy</label>
-                    <span class='date'>10:00</span>
+                    <label for='work5'><span class='date'>10:00 </span>Rejestracja uczestników, briefing prasowy</label>
                     <span class='circle'></span>
                 </div>
                 <div class='content'>
@@ -89,8 +115,7 @@
                 <input class='radio' id='work4' name='works' type='radio'>
 
                 <div class="relative">
-                    <label for='work4'>Lorem ipsum w Polsce</label>
-                    <span class='date'>11:20</span>
+                    <label for='work4'><span class='date'>11:20 </span>Lorem ipsum w Polsce</label>
                     <span class='circle'></span>
                 </div>
                 <div class='content'>
@@ -109,8 +134,8 @@
                 <input class='radio' id='work3' name='works' type='radio'>
 
                 <div class="relative">
-                    <label for='work3'>Nowelizacja prawa w sprawie systematyzacji Lorem Ipsum</label>
-                    <span class='date'>11:40</span>
+                    <label for='work3'><span class='date'>11:40 </span>Nowelizacja prawa w sprawie systematyzacji Lorem
+                        Ipsum</label>
                     <span class='circle'></span>
                 </div>
                 <div class='content'>
@@ -129,9 +154,9 @@
                 <input class='radio' id='work2' name='works' type='radio'>
 
                 <div class="relative">
-                    <label for='work2'>Spodziewany wpływy z tytułu standaryzacjio Lorem Ipsum
+                    <label for='work2'><span class='date'>12:00 </span>Spodziewany wpływy z tytułu standaryzacjio Lorem
+                        Ipsum
                         w 2015 roku</label>
-                    <span class='date'>12:00</span>
                     <span class='circle'></span>
                 </div>
                 <div class='content'>
@@ -150,8 +175,7 @@
                 <input class='radio' id='work1' name='works' type='radio'>
 
                 <div class="relative">
-                    <label for='work1'>Najczęściej popełniane błedy</label>
-                    <span class='date'>12:00</span>
+                    <label for='work1'><span class='date'>12:00 </span>Najczęściej popełniane błedy</label>
                     <span class='circle'></span>
                 </div>
                 <div class='content'>
@@ -168,18 +192,100 @@
             </li>
         </ul>
         <div class="center">
-        <button type="button" class="btn btn-default btn-sm">POBIERZ PROGRAM</button>
+            <button type="button" class="btn btn-default btn-sm">POBIERZ PROGRAM</button>
         </div>
     </div>
 </section>
 
-<section class="parallax-window" data-parallax="scroll" data-image-src="img/background-top.jpg">
+<!--<section id="speakers" class="parallax-window" data-parallax="scroll" data-image-src="img/background-top.jpg">-->
+<!--<div class="content">-->
+<!--<h2 class="title">SPEAKERS</h2>-->
+<!--</div>-->
+<!--</section>-->
+
+<section id="speakers" class="speakers">
     <div class="content">
         <h2 class="title">SPEAKERS</h2>
+
+        <div class="row speakers-first">
+            <div class="col-md-6 col-xs-6 img-speakers">
+                <img src="img/speakers/teresa_brodniewicz.jpg" alt=""/>
+            </div>
+            <div class="col-md-6 col-xs-6" style="display: table">
+                <div class="speakers-info">
+                    <h5>Dr n. biol.</h5>
+
+                    <h3>TERESA <br>BRODNIEWICZ</h3>
+                    <i class="glyphicon glyphicon-menu-down"></i>
+                    <p class="desc-info">Prezes Urzędu Rejestracji
+                        Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych</p>
+                </div>
+            </div>
+        </div>
+        <div class="row speakers-second">
+            <div class="col-md-6 col-xs-6" style="display: table">
+                <div class="speakers-info">
+                    <h5>Dyr. Generalny</h5>
+
+                    <h3>PAWEŁ <br>SZTWIERTNIA</h3>
+                    <i class="glyphicon glyphicon-menu-down"></i>
+                    <p class="desc-info">Prezes Urzędu Rejestracji
+                        Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6 img-speakers">
+                <img src="img/speakers/pawel_sztwiertnia.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="row speakers-third">
+            <div class="col-md-6 col-xs-6 img-speakers">
+                <img src="img/speakers/mariusz-ignatowicz.jpg" alt=""/>
+            </div>
+            <div class="col-md-6 col-xs-6" style="display: table">
+                <div class="speakers-info">
+                    <h5>PricewaterhouseCoopers Sp. z o.o.</h5>
+
+                    <h3>MARIUSZ <br>IGNATOWICZ</h3>
+                    <i class="glyphicon glyphicon-menu-down"></i>
+                    <p class="desc-info">Prezes Urzędu Rejestracji
+                        Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych</p>
+                </div>
+            </div>
+        </div>
+        <div class="row speakers-fourth">
+            <div class="col-md-6 col-xs-6" style="display: table">
+                <div class="speakers-info">
+                    <h5>Prezes.</h5>
+
+                    <h3>GRZEGORZ <br>CESSAK</h3>
+                    <i class="glyphicon glyphicon-menu-down"></i>
+                    <p class="desc-info">Prezes Urzędu Rejestracji
+                        Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6 img-speakers">
+                <img src="img/speakers/grzegorz-cessak.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="row speakers-fifth">
+            <div class="col-md-6 col-xs-6 img-speakers">
+                <img src="img/speakers/marek-czarkowski.jpg" alt=""/>
+            </div>
+            <div class="col-md-6 col-xs-6" style="display: table">
+                <div class="speakers-info">
+                    <h5>Dr hab. n. med.</h5>
+
+                    <h3>MAREK <br>CZARKOWSKI</h3>
+                    <i class="glyphicon glyphicon-menu-down"></i>
+                    <p class="desc-info">Prezes Urzędu Rejestracji
+                        Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="location">
+<section id="location" class="location">
     <div class="content">
         <h2 class="title">LOCATION</h2>
 
@@ -218,20 +324,29 @@
     <div id="cd-zoom-in"></div>
     <div id="cd-zoom-out"></div>
 </section>
-<section class="contact">
+<section id="contact" class="contact">
     <div class="content">
         <h2 class="title">CONTACT</h2>
-        <h4>SUSPENDISSE EGET TURPIS A NULLA SUSCIPIT  CONDIMENTUM ID AT METUS.</h4>
+
         <form id="contact" name="contact" accept-charset="utf-8">
+            <h4>SUSPENDISSE EGET TURPIS A NULLA SUSCIPIT CONDIMENTUM ID AT METUS.</h4>
             <label>Name</label>
             <input name="name" type="text"/>
             <label>Email</label>
             <input name="email" type="email"/>
-            <label>Name</label>
+            <label>Subject</label>
             <input name="sublect" type="text"/>
-            <label>Message</label>
+            <label></label>
             <textarea name="message"></textarea>
-            <input type="checkbox" name="vehicle" value="">
+
+            <div class="check-box">
+                <input type="checkbox" name="vehicle" value="">
+
+                <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
+                    Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a,
+                    ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum
+                    in, dolor. Pellentesque facilisis.</p>
+            </div>
             <div class="center">
                 <button type="submit" class="btn btn-default btn-sm">WYŚLIJ</button>
             </div>
@@ -239,13 +354,18 @@
     </div>
 </section>
 
-<script type="text/javascript" src='js/jquery-1.12.0.min.js'></script>
+<!--<script type="text/javascript" src='js/jquery-1.12.0.min.js'></script>-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src='js/bootstrap.min.js'></script>
 <script type="text/javascript" src='js/parallax.min.js'></script>
 <script type="text/javascript" src='js/smoothScroll.min.js'></script>
-<script type="text/javascript" src='js/script.js'></script>
+
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script type="text/javascript" src='js/maps.js'></script>
 
+<script type="text/javascript" src='js/script.js'></script>
+<!--<script>-->
+    <!--smoothScroll.init();-->
+<!--</script>-->
 </body>
 </html>

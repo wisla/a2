@@ -27,6 +27,30 @@ body {
     color: #fff;
 }
 
+nav {
+    position: fixed;
+    right: 0;
+    z-index: 99;
+    padding: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+#navigation ul li a.active {
+    color: #000;
+}
+
 section {
     width: 100%;
     /*padding: 0 5%;*/
@@ -36,14 +60,11 @@ section {
     background-color: #3B3551;
     height: 100vh;
 }
-section:nth-of-type(2n) {
-    background-color: rgba(41, 38, 56, 0);
-}
 
 .second {
     background-image: url("../img/background-top2.jpg");
     background-position: 0 -100%;
-    /*padding: 0 15%;*/
+    padding: 50px 20px 0;
 }
 
 .title{
@@ -57,6 +78,11 @@ section:nth-of-type(2n) {
 
 .second .title {
     padding-bottom: 10%;
+}
+
+.speakers {
+    background-color: #292638;
+    padding: 50px 2px 0;
 }
 
 .location .title {
@@ -76,9 +102,17 @@ section:nth-of-type(2n) {
 
 /* CONTACT */
 form {
-    /*max-width: 420px;*/
+    max-width: 690px;
     margin: 50px auto;
     /*text-align: center;*/
+}
+
+form input, form textarea {
+    color: #000;
+}
+
+form .btn-sm {
+    padding: 20px 80px;
 }
 
 .contact input {
@@ -88,13 +122,31 @@ form {
 
 .contact textarea {
     height: 190px;
-    width: 690px;
+    width: 100%;
+    margin: 40px 0;
 }
 
 form label {
     display: block;
     font-size: 24px;
     margin-top: 20px;
+}
+
+input[type=checkbox] {
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+    width: 25px;
+}
+
+.check-box {
+    display: block;
+}
+
+.check-box p {
+    font-size: 14px;
+    text-align: left;
+    display: table;
 }
 
 .row {
@@ -133,6 +185,10 @@ h4 {
     font-size: 30px;
 }
 
+h5 {
+    font-size: 24px;
+}
+
 p {
     font-size: 1.5em;
     font-weight: 500;
@@ -144,12 +200,12 @@ a {
     color: #373B44;
     position: relative;
 }
-a:hover {
-    opacity: 0.8;
-}
-a:active {
-    top: 1px;
-}
+/*a:hover {*/
+    /*opacity: 0.8;*/
+/*}*/
+/*a:active {*/
+    /*top: 1px;*/
+/*}*/
 
 footer {
     padding: 1% 5%;
@@ -334,3 +390,290 @@ Main components
 #cd-zoom-out {
     background-position: 50% -32px;
 }
+
+/* mouse scroll animate */
+
+.center-mouse
+{
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    bottom: 25px;
+    text-align: center;
+}
+
+.animate-circle {
+    margin-top: -73px;
+    display: inline-block;
+}
+
+.animate-circle span
+{
+    display: block;
+    width: 5px;
+    height: 5px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+
+    margin: 9px 0 0 0px;
+    background: white;
+    border-radius: 50%;
+}
+
+.unu
+{
+    margin-top: 4px;
+}
+
+.one, .two, .three, .four, .five, .six, .seven
+{
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+}
+
+.one
+{
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
+}
+
+.two
+{
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+    margin-bottom: 55px !important;
+}
+
+.three
+{
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -webkit-animation-direction: alternate;
+}
+
+.four {
+    -webkit-animation-delay: .4s;
+    -moz-animation-delay: .4s;
+    -webkit-animation-direction: alternate;
+}
+
+.five {
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    -webkit-animation-direction: alternate;
+}
+
+.six {
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s;
+    -webkit-animation-direction: alternate;
+}
+
+.seven {
+    -webkit-animation-delay: .7s;
+    -moz-animation-delay: .7s;
+    -webkit-animation-direction: alternate;
+}
+
+.mouse
+{
+    height: 35px;
+    width: 20px;
+    border-radius: 10px;
+    transform: none;
+    border: 2px solid white;
+}
+
+.wheel
+{
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: white;
+    position: relative;
+}
+
+@-webkit-keyframes mouse-wheel
+{
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}
+
+@-moz-keyframes mouse-wheel
+{
+    0% { top: 1px; }
+    50% { top: 2px; }
+    100% { top: 3px;}
+}
+
+@-webkit-keyframes mouse-scroll {
+
+    0%   { opacity: 0;}
+    50%  { opacity: .5;}
+    100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+
+/* END mouse scroll animate */
+
+/* SPEAKERS */
+
+.speakers .row:nth-child(even) img {
+    float: right;
+    max-width: 370px;
+    max-height: 100%;
+}
+
+.speakers .row:nth-child(odd) img {
+    float: left;
+    max-width: 370px;
+    max-height: 100%;
+}
+
+.speakers .row {
+    height: 250px;
+    transition-property:height;
+    -moz-transition-property: height; /* Firefox 4 */
+    -webkit-transition-property:height; /* Safari and Chrome */
+    -o-transition-property:height; /* Opera */
+
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s; /* Firefox 4 */
+    -webkit-transition-duration: 0.5s; /* Safari and Chrome */
+    -o-transition-duration: 0.5s; /* Opera */
+
+    transition-timing-function: linear;
+    -moz-transition-timing-function: linear; /* Firefox 4 */
+    -webkit-transition-timing-function: linear; /* Safari and Chrome */
+    -o-transition-timing-function: linear; /* Opera */
+}
+
+.speakers .row:nth-child(odd) {
+    text-align: right;
+}
+
+.speakers .row:nth-child(odd) p {
+    float: right;
+}
+
+.speakers .row>div {
+    height: 100%;
+    overflow: hidden;
+}
+
+.glyphicon-menu-down {
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.speakers-info {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.speakers-info p {
+    color: #000000;
+    max-width: 350px;
+}
+
+.glyphicon-remove {
+    position: absolute;
+    margin: 20px 0 0 0;
+    border: 1px solid;
+    padding: 2px;
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+.fullDesc {
+    height: 350px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+
+
+    transition-property:height;
+    -moz-transition-property: height; /* Firefox 4 */
+    -webkit-transition-property:height; /* Safari and Chrome */
+    -o-transition-property:height; /* Opera */
+
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s; /* Firefox 4 */
+    -webkit-transition-duration: 0.5s; /* Safari and Chrome */
+    -o-transition-duration: 0.5s; /* Opera */
+
+    transition-timing-function: linear;
+    -moz-transition-timing-function: linear; /* Firefox 4 */
+    -webkit-transition-timing-function: linear; /* Safari and Chrome */
+    -o-transition-timing-function: linear; /* Opera */
+
+    /*transition-delay: .5s;*/
+    /*-moz-transition-delay: .5s; /!* Firefox 4 *!/*/
+    /*-webkit-transition-delay: .5s; /!* Safari and Chrome *!/*/
+    /*-o-transition-delay: .5s; /!* Opera *!/*/
+}
+
+.desc-info {
+    display: none;
+}
+
+.speakers-first {
+    background: url("../img/speakers/speakers-bg-01.jpg");
+    background-size: cover;
+    margin-top: 50px;
+}
+
+.speakers-second {
+    background: url("../img/speakers/speakers-bg-02.jpg");
+    background-size: cover;
+}
+
+.speakers-third {
+    background: url("../img/speakers/speakers-bg-03.jpg");
+    background-size: cover;
+}
+
+.speakers-fourth {
+    background: url("../img/speakers/speakers-bg-04.jpg");
+    background-size: cover;
+}
+
+.speakers-fifth {
+    background: url("../img/speakers/speakers-bg-05.jpg");
+    background-size: cover;
+}
+
+/* END SPEAKERS /*
