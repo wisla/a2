@@ -19,16 +19,13 @@
 }
 
 .date {
-    /*margin-top: -10px;*/
-    /*top: 50%;*/
-    /*left: -158px;*/
-    /*font-size: 0.95em;*/
-    /*position: absolute;*/
     vertical-align: middle;
     line-height: 5px;
     font-family: Lato Thin;
     font-size: 49px;
     font-weight: 100;
+    display: table-cell;
+    padding-right: 10px;
 }
 
 .circle {
@@ -62,18 +59,7 @@
     pointer-events: none;
     right: 100%;
 }
-/*.agenda .content:before {*/
-    /*border-right-color: inherit;*/
-    /*border-width: 20px;*/
-    /*top: 50%;*/
-    /*margin-top: -20px;*/
-/*}*/
-/*.agenda .content:after {*/
-    /*border-right-color: #48b379;*/
-    /*border-width: 17px;*/
-    /*top: 50%;*/
-    /*margin-top: -17px;*/
-/*}*/
+
 .agenda .content p {
     max-height: 0;
     color: transparent;
@@ -90,6 +76,7 @@
     cursor: pointer;
     top: 20px;
     transition: transform 0.2s linear;
+    display: inline-table;
 }
 
 .radio {
@@ -99,21 +86,20 @@
 .radio:checked + .relative label {
     cursor: auto;
     transform: translateX(42px);
+    display: inline-table;
 }
 .radio:checked + .relative .circle {
     background: #5A6581;
 }
-/*.radio:checked ~ .content {*/
-    /*max-height: 180px;*/
-    /*border-color: #eee9dc;*/
-    /*margin-right: 20px;*/
-    /*transform: translateX(20px);*/
-    /*transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;*/
-/*}*/
+
 .radio:checked ~ .content p {
     max-height: 100%;
     color: #eee9dc;
     transition: color 0.3s linear 0.3s;
+}
+
+.relative {
+    display: inline-block;
 }
 
 /* -------------------------------------
@@ -141,32 +127,15 @@
 
     .agenda .content {
         padding-top: 45px;
-        /*border-color: #eee9dc;*/
     }
-    /*.agenda .content:before, .content:after {*/
-        /*border: solid transparent;*/
-        /*bottom: 100%;*/
-    /*}*/
-    /*.agenda .content:before {*/
-        /*border-bottom-color: inherit;*/
-        /*border-width: 17px;*/
-        /*top: -16px;*/
-        /*left: 50px;*/
-        /*margin-left: -17px;*/
-    /*}*/
-    /*.agenda .content:after {*/
-        /*border-bottom-color: #48b379;*/
-        /*border-width: 20px;*/
-        /*top: -20px;*/
-        /*left: 50px;*/
-        /*margin-left: -20px;*/
-    /*}*/
+
+    .date {
+        font-size: 30px;
+    }
+
     .agenda .content p {
         font-size: 0.9em;
         line-height: 1.4;
     }
 
-    .circle, .date {
-        display: none;
-    }
 }
